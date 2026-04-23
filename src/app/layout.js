@@ -2,6 +2,7 @@ import { Jost, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
+import { AuthProvider } from "@/context/AuthContext";
 
 const jost = Jost({
   variable: "--font-sans",
@@ -26,9 +27,11 @@ export default function RootLayout({ children }) {
       className={`${jost.variable} ${mono.variable} h-full antialiased`}
     >
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <AuthProvider>
+          <Header />
+          {children}
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );
