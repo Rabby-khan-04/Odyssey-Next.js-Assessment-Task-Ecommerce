@@ -1,6 +1,7 @@
+import { IconSparkles2Filled } from "@tabler/icons-react";
 import { useState } from "react";
 
-const HoverEffectText = ({ text }) => {
+const HoverEffectText = ({ text, isActive = false }) => {
   const [styles, setStyles] = useState([]);
 
   const generateStyles = () => {
@@ -23,10 +24,15 @@ const HoverEffectText = ({ text }) => {
 
   return (
     <div
-      className="inline-flex text-2xl font-medium cursor-pointer"
+      className="inline-flex items-center cursor-pointer"
       onMouseEnter={generateStyles}
       onMouseLeave={resetStyles}
     >
+      {isActive ? (
+        <span className="mr-2">
+          <IconSparkles2Filled size={20} />
+        </span>
+      ) : null}
       {text.split("").map((char, i) => (
         <span
           key={i}
@@ -39,6 +45,11 @@ const HoverEffectText = ({ text }) => {
           {char === " " ? "\u00A0" : char}
         </span>
       ))}
+      {isActive ? (
+        <span className="ml-2">
+          <IconSparkles2Filled size={20} />
+        </span>
+      ) : null}
     </div>
   );
 };

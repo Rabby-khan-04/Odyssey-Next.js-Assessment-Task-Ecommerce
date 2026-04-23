@@ -16,7 +16,7 @@ const NavLink = ({ path, color, children }) => {
           : `text-secondary duration-300 hover:text-(--item-color)`
       }
     >
-      <HoverEffectText text={children} />
+      <HoverEffectText text={children} isActive={isActive} />
     </Link>
   );
 };

@@ -1,9 +1,9 @@
-const Page = () => {
+const Sale = () => {
   return (
     <div>
-      <h1>This is Page component</h1>
+      <h1>This is Sale component</h1>
     </div>
   );
 };
 
-export default Page;
+export default Sale;

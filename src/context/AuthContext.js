@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
 
   const logoutAUser = () => {
     setLoading(true);
-    return signOut();
+    return signOut(auth);
   };
 
   useEffect(() => {

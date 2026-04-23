@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { AuthProvider } from "@/context/AuthContext";
+import { Toaster } from "react-hot-toast";
 
 const jost = Jost({
   variable: "--font-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </AuthProvider>
+        <Toaster />
       </body>
     </html>
   );
