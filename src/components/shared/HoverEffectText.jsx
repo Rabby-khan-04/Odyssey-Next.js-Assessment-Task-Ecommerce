@@ -1,3 +1,5 @@
+"use client";
+
 import { IconSparkles2Filled } from "@tabler/icons-react";
 import { useState } from "react";
 

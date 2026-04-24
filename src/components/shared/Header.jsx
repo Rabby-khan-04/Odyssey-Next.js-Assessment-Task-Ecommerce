@@ -13,6 +13,7 @@ import { useAuth } from "@/context/AuthContext";
 
 const Header = () => {
   const { user } = useAuth();
+
   return (
     <header>
       {/* Top Bar */}
@@ -46,7 +47,7 @@ const Header = () => {
           {/* Logo */}
           <div className="col-span-5 md:col-span-3 lg:col-span-2 self-center">
             <Link href="/">
-              <Image src={logo} alt="logo" />
+              <Image loading="eager" src={logo} alt="logo" />
             </Link>
           </div>
 

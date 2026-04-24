@@ -4,16 +4,18 @@ import {
   DrawerContent,
   DrawerDescription,
   DrawerHeader,
+  DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { IconMenu2Filled, IconXFilled } from "@tabler/icons-react";
 import NavLink from "../shared/NavLink";
 import { navLinks } from "@/constants/navLinks";
-import AuthButton from "./AuthButton";
 import { useState } from "react";
+import { useAuth } from "@/context/AuthContext";
 
 const MobileMenu = () => {
   const [open, setOpen] = useState(false);
+  const { user } = useAuth();
   return (
     <Drawer open={open} onOpenChange={setOpen} direction="right">
       <DrawerTrigger className="cursor-pointer">
@@ -21,6 +23,7 @@ const MobileMenu = () => {
       </DrawerTrigger>
       <DrawerContent className="w-[85%]! max-w-none! flex items-center justify-center">
         <DrawerHeader className="flex justify-end">
+          <DrawerTitle className="sr-only">Navigation Menu</DrawerTitle>
           <DrawerClose className="absolute top-4 right-4 z-50 p-2 rounded-md hover:bg-muted cursor-pointer">
             <IconXFilled />
           </DrawerClose>
@@ -39,7 +42,7 @@ const MobileMenu = () => {
             </li>
           ))}
 
-          {
+          {user ? null : (
             <>
               <li
                 key="sign-up"
@@ -60,7 +63,7 @@ const MobileMenu = () => {
                 </NavLink>
               </li>
             </>
-          }
+          )}
         </ul>
       </DrawerContent>
     </Drawer>

@@ -4,6 +4,7 @@ import {
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
+  DropdownMenuLabel,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
@@ -37,6 +38,8 @@ const UserDropdown = () => {
         <IconUserCircle size={32} className="cursor-pointer" />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-auto" align="end">
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+
         <DropdownMenuGroup>
           <DropdownMenuItem
             onClick={() => setOpen(false)}
