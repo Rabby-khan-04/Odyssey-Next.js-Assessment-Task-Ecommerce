@@ -3,7 +3,6 @@ import Image from "next/image";
 import logo from "@/../public/logo-black.png";
 import Link from "next/link";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
-import HoverEffectText from "./HoverEffectText";
 import NavLink from "./NavLink";
 import MobileMenu from "../header/MobileMenu";
 import { navLinks } from "@/constants/navLinks";
@@ -13,6 +12,8 @@ import { useAuth } from "@/context/AuthContext";
 
 const Header = () => {
   const { user } = useAuth();
+
+  console.log(user);
 
   return (
     <header>

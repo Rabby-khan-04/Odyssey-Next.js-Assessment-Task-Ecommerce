@@ -1,4 +1,4 @@
-import BannerSection from "@/components/homePage/BannerSection";
+import BannerSection from "@/components/homePage/banner/BannerSection";
 import Image from "next/image";
 
 export default function Home() {

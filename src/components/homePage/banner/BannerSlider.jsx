@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CustomBtn from "../shared/CustomBtn";
+import CustomBtn from "../../shared/CustomBtn";
 import Link from "next/link";
 
 const BannerSlider = (props) => {
