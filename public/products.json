@@ -1,0 +1,302 @@
+[
+  {
+    "id": "1001",
+    "title": "Jacket",
+    "category": "Jacket",
+    "vendor": {
+      "name": "Nextcart",
+      "type": "Fashion"
+    },
+    "pricing": {
+      "current": 28,
+      "original": 35
+    },
+    "inventory": {
+      "stock": 18,
+      "inStock": true,
+      "sku": "1001"
+    },
+    "variants": {
+      "sizes": ["S", "M", "L"],
+      "colors": ["Black", "White", "Pink"]
+    },
+    "media": {
+      "images": [
+        "https://i.ibb.co.com/MygvN4Tr/ia-1600000052.jpg",
+        "https://i.ibb.co.com/yzF40zB/ia-1600000053.jpg",
+        "https://i.ibb.co.com/rDFM9hD/ia-1600000054.jpg",
+        "https://i.ibb.co.com/dsWdNgdt/ia-1600000055.jpg"
+      ]
+    },
+    "shipping": "5-7 days",
+    "returns": "Within 45 days of purchase",
+    "details": {
+      "description": "Lightweight crop top designed for everyday wear.",
+      "materials": ["Cotton blend"]
+    },
+    "care": ["Wash cold", "Do not bleach", "Iron low heat"]
+  },
+  {
+    "id": "1002",
+    "title": "Short Dress",
+    "category": "Crop Tops",
+    "vendor": {
+      "name": "Nextcart",
+      "type": "Fashion"
+    },
+    "pricing": {
+      "current": 52,
+      "original": 65
+    },
+    "inventory": {
+      "stock": 12,
+      "inStock": true,
+      "sku": "1002"
+    },
+    "variants": {
+      "sizes": ["S", "M", "L"],
+      "colors": ["Red", "Black", "Beige"]
+    },
+    "media": {
+      "images": [
+        "https://i.ibb.co.com/JFdKjmbz/ia-1000000051.jpg",
+        "https://i.ibb.co.com/HDbLM5mb/ia-1000000052.jpg",
+        "https://i.ibb.co.com/MyMQV9Mz/ia-1000000053.jpg",
+        "https://i.ibb.co.com/Zz9rkJGH/ia-1000000054.jpg"
+      ]
+    },
+    "shipping": "5-7 days",
+    "returns": "Within 45 days of purchase",
+    "details": {
+      "description": "Elegant short dress for casual and party wear.",
+      "materials": ["Polyester blend"]
+    },
+    "care": ["Hand wash recommended", "Do not bleach"]
+  },
+  {
+    "id": "1003",
+    "title": "Poplin Shirt",
+    "category": "Shirt",
+    "vendor": {
+      "name": "Nextcart",
+      "type": "Fashion"
+    },
+    "pricing": {
+      "current": 38,
+      "original": 45
+    },
+    "inventory": {
+      "stock": 25,
+      "inStock": true,
+      "sku": "1003"
+    },
+    "variants": {
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["White", "Blue"]
+    },
+    "media": {
+      "images": [
+        "https://i.ibb.co.com/PGd8N5Ln/ia-1200000051.jpg",
+        "https://i.ibb.co.com/DfvGfMnB/ia-1200000052.jpg",
+        "https://i.ibb.co.com/BVPQBqPL/ia-1200000053.jpg",
+        "https://i.ibb.co.com/gML8SgbX/ia-1200000054.jpg"
+      ]
+    },
+    "shipping": "5-7 days",
+    "returns": "Within 45 days of purchase",
+    "details": {
+      "description": "Classic poplin shirt with a clean and structured fit.",
+      "materials": ["100% cotton poplin"]
+    },
+    "care": ["Machine wash cold", "Iron medium heat"]
+  },
+  {
+    "id": "1004",
+    "title": "Knitted Top",
+    "category": "Tops",
+    "vendor": {
+      "name": "Nextcart",
+      "type": "Fashion"
+    },
+    "pricing": {
+      "current": 34,
+      "original": 42
+    },
+    "inventory": {
+      "stock": 20,
+      "inStock": true,
+      "sku": "1004"
+    },
+    "variants": {
+      "sizes": ["S", "M", "L"],
+      "colors": ["Cream", "Gray", "Green"]
+    },
+    "media": {
+      "images": [
+        "https://i.ibb.co.com/H5BWC5r/ia-1800000052.jpg",
+        "https://i.ibb.co.com/PsGsJPz1/ia-1800000053.jpg",
+        "https://i.ibb.co.com/KcsyMvBm/ia-1800000054.jpg",
+        "https://i.ibb.co.com/qFXgyP2Z/ia-1800000056.jpg"
+      ]
+    },
+    "shipping": "5-7 days",
+    "returns": "Within 45 days of purchase",
+    "details": {
+      "description": "Soft knitted top for a cozy and stylish look.",
+      "materials": ["Acrylic blend"]
+    },
+    "care": ["Hand wash", "Dry flat"]
+  },
+  {
+    "id": "1005",
+    "title": "Draped Dress",
+    "category": "T-shirt",
+    "vendor": {
+      "name": "Nextcart",
+      "type": "Fashion"
+    },
+    "pricing": {
+      "current": 60,
+      "original": 75
+    },
+    "inventory": {
+      "stock": 15,
+      "inStock": true,
+      "sku": "1005"
+    },
+    "variants": {
+      "sizes": ["S", "M", "L"],
+      "colors": ["Black", "Wine"]
+    },
+    "media": {
+      "images": [
+        "https://i.ibb.co.com/Knz09tB/ia-2000000051.jpg",
+        "https://i.ibb.co.com/DFr82pK/ia-2000000052.jpg",
+        "https://i.ibb.co.com/4nZrGDkb/ia-2000000053.jpg",
+        "https://i.ibb.co.com/Fqqct2YZ/ia-2000000054.jpg"
+      ]
+    },
+    "shipping": "5-7 days",
+    "returns": "Within 45 days of purchase",
+    "details": {
+      "description": "Flowy draped dress designed for elegant movement.",
+      "materials": ["Viscose blend"]
+    },
+    "care": ["Gentle wash", "Do not tumble dry"]
+  },
+  {
+    "id": "1006",
+    "title": "Basic t-shirt",
+    "category": "T-shirt",
+    "vendor": {
+      "name": "Nextcart",
+      "type": "Fashion"
+    },
+
+    "pricing": {
+      "current": 42,
+      "original": 55
+    },
+
+    "inventory": {
+      "stock": 14,
+      "inStock": true,
+      "sku": "445"
+    },
+
+    "variants": {
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["Gray", "Brown", "Beige"]
+    },
+
+    "media": {
+      "images": [
+        "https://i.ibb.co.com/JF2gCJJv/ia-600002473.jpg",
+        "https://i.ibb.co.com/cSNn265Q/ia-600002474.jpg",
+        "https://i.ibb.co.com/qFdhgrnY/ia-600002475.jpg",
+        "https://i.ibb.co.com/gLPmV9S9/ia-600000056.jpg"
+      ]
+    },
+
+    "shipping": "5-7 days",
+
+    "returns": "Within 45 days of purchase",
+
+    "details": {
+      "description": "Basic t-shirt made with recycled polyester. Environmentally friendly production.",
+      "materials": ["30% recycled polyester"],
+      "sustainability": {
+        "standard": "Green to Wear 2.0",
+        "program": "The List (Inditex)"
+      }
+    },
+
+    "care": ["Iron maximum 100ºC", "Do not bleach", "Do not dry clean"],
+
+    "reviews": {
+      "count": 0,
+      "rating": null
+    }
+  },
+  {
+    "id": "1007",
+    "title": "Classic top",
+    "category": "Tops",
+    "vendor": {
+      "name": "Nextcart",
+      "type": "Fashion"
+    },
+
+    "pricing": {
+      "current": 40,
+      "original": null
+    },
+
+    "inventory": {
+      "stock": 22,
+      "inStock": true,
+      "sku": "445"
+    },
+
+    "variants": {
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["Green"]
+    },
+
+    "media": {
+      "images": [
+        "https://i.ibb.co.com/N22jFYLp/ia-800000051.jpg",
+        "https://i.ibb.co.com/6K9G6w9/ia-800000052.jpg",
+        "https://i.ibb.co.com/wrs8hjP6/ia-800000053.jpg",
+        "https://i.ibb.co.com/6pfLnXv/ia-800000054.jpg"
+      ]
+    },
+
+    "shipping": "5-7 days",
+
+    "returns": "Within 45 days of purchase",
+
+    "details": {
+      "description": "Classic top made with recycled polyester using environmentally friendly production methods.",
+      "materials": ["30% recycled polyester"],
+      "sustainability": {
+        "standard": "Green to Wear 2.0",
+        "program": "The List (Inditex)"
+      }
+    },
+
+    "care": ["Iron maximum 100ºC", "Do not bleach", "Do not dry clean"],
+
+    "specifications": {
+      "wearing": {
+        "modelHeight": "1.84 m",
+        "sizeWorn": "M"
+      }
+    },
+
+    "reviews": {
+      "count": 0,
+      "rating": null
+    }
+  }
+]

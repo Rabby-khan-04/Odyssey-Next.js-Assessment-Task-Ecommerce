@@ -11,7 +11,7 @@ import UserDropdown from "../header/UserDropdown";
 import { useAuth } from "@/context/AuthContext";
 
 const Header = () => {
-  const { user } = useAuth();
+  const { user, loading } = useAuth();
 
   return (
     <header>
@@ -53,7 +53,7 @@ const Header = () => {
           {/* Auth Links and Dropdown */}
           <div className="col-span-7 md:col-span-9 lg:col-span-5 self-center flex items-center justify-end gap-4">
             {/* Desktop Auth Links and Dropdown */}
-            {user ? <UserDropdown /> : <AuthButton />}
+            {!loading && user ? <UserDropdown /> : <AuthButton />}
 
             {/* Mobile Dropdow and Auth Links */}
             <div className="lg:hidden max-lg:flex max-lg:justify-end">
