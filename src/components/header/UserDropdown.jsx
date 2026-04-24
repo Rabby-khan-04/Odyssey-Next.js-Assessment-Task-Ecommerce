@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,10 +17,12 @@ import NavLink from "../shared/NavLink";
 import { useState } from "react";
 import { useAuth } from "@/context/AuthContext";
 import toast from "react-hot-toast";
+import Image from "next/image";
+import userImg from "@/../public/user.png";
 
 const UserDropdown = () => {
   const [open, setOpen] = useState(false);
-  const { logoutAUser } = useAuth();
+  const { user, logoutAUser } = useAuth();
 
   const handleLogout = () => {
     logoutAUser()
@@ -35,10 +36,21 @@ const UserDropdown = () => {
   return (
     <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
-        <IconUserCircle size={32} className="cursor-pointer" />
+        <div className="relative w-10 h-10 rounded-full overflow-hidden cursor-pointer">
+          <Image
+            src={user && user?.photoURL ? user?.photoURL : userImg}
+            className="object-cover"
+            fill
+            alt="avatar"
+          />
+        </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-auto" align="end">
-        <DropdownMenuLabel>My Account</DropdownMenuLabel>
+        <DropdownMenuLabel>
+          <p className="text-base mb-4 text-black font-semibold">
+            Hello, {user?.displayName}
+          </p>
+        </DropdownMenuLabel>
 
         <DropdownMenuGroup>
           <DropdownMenuItem

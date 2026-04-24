@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
 const SigninSection = () => {
-  const { loading, emailPasswordLogin } = useAuth();
+  const { emailPasswordLogin } = useAuth();
   const router = useRouter();
   const handleSubmitForm = (e) => {
     e.preventDefault();
@@ -35,7 +35,7 @@ const SigninSection = () => {
         <AuthPageHeader text="Signin account" />
 
         {/* Login Form */}
-        <SigninForm onSubmit={handleSubmitForm} loading={loading} />
+        <SigninForm onSubmit={handleSubmitForm} />
       </div>
     </section>
   );

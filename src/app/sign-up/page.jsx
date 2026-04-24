@@ -1,8 +1,12 @@
+import TitleSection from "@/components/shared/TitleSection";
+import SignupSection from "@/components/signup/SignupSection";
+
 const Signup = () => {
   return (
-    <div>
-      <h1>This is Signup component</h1>
-    </div>
+    <>
+      <TitleSection path="/" label="Home" title="Account" />
+      <SignupSection />
+    </>
   );
 };
 

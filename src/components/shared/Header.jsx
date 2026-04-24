@@ -13,8 +13,6 @@ import { useAuth } from "@/context/AuthContext";
 const Header = () => {
   const { user } = useAuth();
 
-  console.log(user);
-
   return (
     <header>
       {/* Top Bar */}
