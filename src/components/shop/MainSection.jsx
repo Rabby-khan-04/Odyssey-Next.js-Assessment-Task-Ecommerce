@@ -6,38 +6,21 @@ import ProductSearchBar from "./ProductSearchBar";
 import ProductContainer from "./ProductContainer";
 import CategorySidebar from "./CategorySidebar";
 import FilterSidebarModal from "./FilterSidebarModal";
+import useProductFilter from "@/hooks/useProductFilter";
 
 const MainSection = ({ initialProducts }) => {
   const [searchInput, setSearchInput] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
-  const [products, setProducts] = useState(initialProducts);
   const [selectedCategory, setSelectedCategory] = useState([]);
   const [selectedSize, setSelectedSize] = useState([]);
+  const products = initialProducts;
 
-  const filteredProducts = useMemo(() => {
-    let result = products;
-
-    if (selectedCategory.length > 0) {
-      result = result.filter((product) =>
-        selectedCategory.includes(product.category),
-      );
-    }
-
-    if (selectedSize.length > 0) {
-      result = result.filter((product) =>
-        product.variants?.sizes?.some((size) => selectedSize.includes(size)),
-      );
-    }
-
-    if (searchQuery.trim() !== "") {
-      result = result.filter((product) =>
-        product.title.toLowerCase().includes(searchQuery.toLowerCase()),
-      );
-    }
-    return result;
-  }, [products, selectedCategory, selectedSize, searchQuery]);
-
-  const handleSearchQuery = () => {};
+  const filteredProducts = useProductFilter(
+    products,
+    selectedCategory,
+    selectedSize,
+    searchQuery,
+  );
 
   const handleSelectCategory = (categoryName) => {
     setSelectedSize([]);
@@ -87,7 +70,7 @@ const MainSection = ({ initialProducts }) => {
           />
         </aside>
         <div className="w-full lg:w-3/4 px-7">
-          <ProductBanner handleSearch={handleSearchQuery} />
+          <ProductBanner />
           <div className="flex items-center pb-7 border-b mb-7 gap-4">
             <div className="block lg:hidden">
               <FilterSidebarModal

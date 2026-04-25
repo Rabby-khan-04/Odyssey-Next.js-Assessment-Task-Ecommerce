@@ -1,33 +1,13 @@
+import useCategory from "@/hooks/useCategory";
 import { Button } from "../ui/button";
 import FilterCheckBox from "./FilterCheckBox";
 import ShopMiniTitle from "./ShopMiniTitle";
+import useSizes from "@/hooks/useSizes";
 
 const CategorySidebar = (props) => {
-  const categories = props.products.reduce((acc, product) => {
-    const category = product.category;
-    const existing = acc.find((item) => item.name === category);
+  const categories = useCategory(props?.products);
 
-    if (existing) {
-      existing.count += 1;
-    } else {
-      acc.push({ name: category, count: 1 });
-    }
-
-    return acc;
-  }, []);
-
-  const sizes = props?.filteredProducts.reduce((acc, product) => {
-    product?.variants?.sizes.forEach((size) => {
-      const existing = acc.find((s) => s.name === size);
-      if (existing) {
-        existing.count += 1;
-      } else {
-        acc.push({ name: size, count: 1 });
-      }
-    });
-
-    return acc;
-  }, []);
+  const sizes = useSizes(props?.filteredProducts);
 
   return (
     <>
