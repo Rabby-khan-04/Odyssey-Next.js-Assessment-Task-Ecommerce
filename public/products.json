@@ -18,7 +18,11 @@
     },
     "variants": {
       "sizes": ["S", "M", "L"],
-      "colors": ["Black", "White", "Pink"]
+      "colors": [
+        { "name": "Black", "hex": "#000000", "disabled": false },
+        { "name": "White", "hex": "#ffffff", "disabled": false },
+        { "name": "Pink", "hex": "#f48fb1", "disabled": false }
+      ]
     },
     "media": {
       "images": [
@@ -55,7 +59,11 @@
     },
     "variants": {
       "sizes": ["S", "M", "L"],
-      "colors": ["Red", "Black", "Beige"]
+      "colors": [
+        { "name": "Red", "hex": "#d32f2f", "disabled": false },
+        { "name": "Black", "hex": "#000000", "disabled": false },
+        { "name": "Beige", "hex": "#e6d2b5", "disabled": true }
+      ]
     },
     "media": {
       "images": [
@@ -92,7 +100,10 @@
     },
     "variants": {
       "sizes": ["M", "XL"],
-      "colors": ["White", "Blue"]
+      "colors": [
+        { "name": "White", "hex": "#ffffff", "disabled": false },
+        { "name": "Blue", "hex": "#1976d2", "disabled": false }
+      ]
     },
     "media": {
       "images": [
@@ -129,7 +140,11 @@
     },
     "variants": {
       "sizes": ["L"],
-      "colors": ["Cream", "Gray", "Green"]
+      "colors": [
+        { "name": "Cream", "hex": "#f5e6c8", "disabled": false },
+        { "name": "Gray", "hex": "#9e9e9e", "disabled": false },
+        { "name": "Green", "hex": "#4caf50", "disabled": false }
+      ]
     },
     "media": {
       "images": [
@@ -166,7 +181,10 @@
     },
     "variants": {
       "sizes": ["S", "L"],
-      "colors": ["Black", "Wine"]
+      "colors": [
+        { "name": "Black", "hex": "#000000", "disabled": false },
+        { "name": "Wine", "hex": "#6a1b4d", "disabled": false }
+      ]
     },
     "media": {
       "images": [
@@ -206,7 +224,11 @@
 
     "variants": {
       "sizes": ["L", "XL"],
-      "colors": ["Gray", "Brown", "Beige"]
+      "colors": [
+        { "name": "Gray", "hex": "#9e9e9e", "disabled": false },
+        { "name": "Brown", "hex": "#795548", "disabled": false },
+        { "name": "Beige", "hex": "#e6d2b5", "disabled": true }
+      ]
     },
 
     "media": {
@@ -260,7 +282,7 @@
 
     "variants": {
       "sizes": ["S", "M", "L", "XL"],
-      "colors": ["Green"]
+      "colors": [{ "name": "Green", "hex": "#2e7d32", "disabled": false }]
     },
 
     "media": {
