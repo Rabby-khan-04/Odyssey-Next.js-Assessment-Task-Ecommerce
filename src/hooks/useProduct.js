@@ -7,15 +7,35 @@ const useProduct = (productId) => {
   useEffect(() => {
     async function fetchProduct() {
       setIsProductLoading(true);
-      const res = await fetch("/products.json");
-      const data = await res.json();
 
-      const found = data.find((p) => p.id === productId);
-      setProduct(found);
-      setIsProductLoading(false);
+      try {
+        const res = await fetch("/products.json");
+        const apiData = await res.json();
+
+        let found = apiData.find((p) => p.id === productId);
+
+        if (!found) {
+          const localData = JSON.parse(localStorage.getItem("products")) || [];
+
+          found = localData.find((p) => p.id === productId);
+        }
+
+        setProduct(found || null);
+      } catch (error) {
+        console.error("Failed to fetch product:", error);
+
+        const localData = JSON.parse(localStorage.getItem("products")) || [];
+
+        const found = localData.find((p) => p.id === productId);
+        setProduct(found || null);
+      } finally {
+        setIsProductLoading(false);
+      }
     }
 
-    fetchProduct();
+    if (productId) {
+      fetchProduct();
+    }
   }, [productId]);
 
   return { product, isProductLoading };
