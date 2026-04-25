@@ -53,7 +53,7 @@ const ProductDetails = (props) => {
               <p>
                 The Green to Wear 2.0 standard aims to minimize the
                 environmental impact of textile production. To this end, we have
-                developed Inditex's The List program.
+                developed Inditex{"'"}s The List program.
               </p>
             </div>
           </div>

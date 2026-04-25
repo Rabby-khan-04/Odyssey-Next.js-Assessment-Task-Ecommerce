@@ -1,8 +1,12 @@
+import ProductAddingForm from "@/components/product/ProductAddingForm";
+import TitleSection from "@/components/shared/TitleSection";
+
 const AddItem = () => {
   return (
-    <div>
-      <h1>This is AddItem component</h1>
-    </div>
+    <>
+      <TitleSection path="/" label="Home" title="Add Product" />
+      <ProductAddingForm />
+    </>
   );
 };
 
