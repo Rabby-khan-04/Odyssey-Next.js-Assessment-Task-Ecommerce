@@ -91,7 +91,7 @@
       "sku": "1003"
     },
     "variants": {
-      "sizes": ["S", "M", "L", "XL"],
+      "sizes": ["M", "XL"],
       "colors": ["White", "Blue"]
     },
     "media": {
@@ -128,7 +128,7 @@
       "sku": "1004"
     },
     "variants": {
-      "sizes": ["S", "M", "L"],
+      "sizes": ["L"],
       "colors": ["Cream", "Gray", "Green"]
     },
     "media": {
@@ -165,7 +165,7 @@
       "sku": "1005"
     },
     "variants": {
-      "sizes": ["S", "M", "L"],
+      "sizes": ["S", "L"],
       "colors": ["Black", "Wine"]
     },
     "media": {
@@ -205,7 +205,7 @@
     },
 
     "variants": {
-      "sizes": ["S", "M", "L", "XL"],
+      "sizes": ["L", "XL"],
       "colors": ["Gray", "Brown", "Beige"]
     },
 

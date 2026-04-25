@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 
 const FilterCheckBox = (props) => {
   return (
-    <FieldGroup className="w-full py-2 cursor-pointer">
+    <FieldGroup className="w-full py-2 cursor-pointer!">
       <Field orientation="horizontal">
         <Checkbox
           id={props?.name}
