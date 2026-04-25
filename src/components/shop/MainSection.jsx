@@ -8,18 +8,34 @@ import CategorySidebar from "./CategorySidebar";
 import FilterSidebarModal from "./FilterSidebarModal";
 
 const MainSection = ({ initialProducts }) => {
+  const [searchInput, setSearchInput] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [products, setProducts] = useState(initialProducts);
   const [selectedCategory, setSelectedCategory] = useState([]);
   const [selectedSize, setSelectedSize] = useState([]);
 
   const filteredProducts = useMemo(() => {
-    if (selectedCategory.length === 0) return products;
+    let result = products;
 
-    return products.filter((product) =>
-      selectedCategory.includes(product.category),
-    );
-  }, [selectedCategory, products]);
+    if (selectedCategory.length > 0) {
+      result = result.filter((product) =>
+        selectedCategory.includes(product.category),
+      );
+    }
+
+    if (selectedSize.length > 0) {
+      result = result.filter((product) =>
+        product.variants?.sizes?.some((size) => selectedSize.includes(size)),
+      );
+    }
+
+    if (searchQuery.trim() !== "") {
+      result = result.filter((product) =>
+        product.title.toLowerCase().includes(searchQuery.toLowerCase()),
+      );
+    }
+    return result;
+  }, [products, selectedCategory, selectedSize, searchQuery]);
 
   const handleSearchQuery = () => {};
 
@@ -43,6 +59,18 @@ const MainSection = ({ initialProducts }) => {
         return [...prev, size];
       }
     });
+  };
+
+  const handleSearchInput = (value) => {
+    setSearchInput(value);
+
+    if (value.trim() === "") {
+      setSearchQuery("");
+    }
+  };
+
+  const handleProductSearch = () => {
+    setSearchQuery(searchInput);
   };
 
   return (
@@ -71,7 +99,11 @@ const MainSection = ({ initialProducts }) => {
                 filteredProducts={filteredProducts}
               />
             </div>
-            <ProductSearchBar count={filteredProducts.length} />
+            <ProductSearchBar
+              onChange={handleSearchInput}
+              onSubmit={handleProductSearch}
+              count={filteredProducts.length}
+            />
           </div>
           <ProductContainer products={filteredProducts} />
         </div>
