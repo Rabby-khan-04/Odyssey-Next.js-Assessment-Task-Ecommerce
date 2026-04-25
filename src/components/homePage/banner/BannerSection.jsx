@@ -32,7 +32,7 @@ export default function BannerSection() {
   ];
 
   return (
-    <section className="w-full h-125 md:h-175 lg:h-212.5">
+    <section className="w-full">
       <BannerSliderClient data={bannerData} />
     </section>
   );

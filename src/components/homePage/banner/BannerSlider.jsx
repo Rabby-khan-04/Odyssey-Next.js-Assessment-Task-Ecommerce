@@ -22,12 +22,12 @@ const BannerSlider = (props) => {
       />
 
       <div className="main-container absolute inset-0 flex items-center">
-        <div className="w-11/12 sm:w-1/2">
+        <div className="w-[60%] sm:w-1/2">
           <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4 md:mb-6 lg:mb-8">
             {props.subtitle}
           </p>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] font-extrabold uppercase leading-none mb-5 md:mb-7 lg:mb-9">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[80px] font-extrabold uppercase leading-none mb-5 md:mb-7 lg:mb-9">
             {props.title}
           </h2>
 
