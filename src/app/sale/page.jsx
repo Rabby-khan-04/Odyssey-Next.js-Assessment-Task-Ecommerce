@@ -1,8 +1,17 @@
+import SaleBannerSection from "@/components/salePage/SaleBannerSection";
+import SaleMarquee from "./SaleMarquee";
+import NewArrivalProducts from "@/components/homePage/newArrival/NewArrivalProducts";
+
 const Sale = () => {
   return (
-    <div>
-      <h1>This is Sale component</h1>
-    </div>
+    <>
+      <SaleBannerSection />
+      <SaleMarquee />
+      <NewArrivalProducts
+        title="Last Chance
+50–75% Off. Snooze—You Lose "
+      />
+    </>
   );
 };
 

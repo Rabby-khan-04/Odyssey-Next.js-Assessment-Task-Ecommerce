@@ -1,5 +1,6 @@
 "use client";
 
+import Loading from "@/components/shared/Loading";
 import ProductBreadcrumb from "@/components/shop/product/ProductBreadcrumb";
 import ProductDetails from "@/components/shop/product/ProductDetails";
 import useProduct from "@/hooks/useProduct";
@@ -8,8 +9,7 @@ import { useParams } from "next/navigation";
 export default function Page() {
   const { productId } = useParams();
   const { product, isProductLoading } = useProduct(productId);
-  if (isProductLoading) return <h1>Loading</h1>;
-  console.log(product);
+  if (isProductLoading) return <Loading />;
 
   return (
     <>

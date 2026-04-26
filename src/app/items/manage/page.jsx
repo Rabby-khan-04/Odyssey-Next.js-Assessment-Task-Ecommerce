@@ -1,6 +1,7 @@
 "use client";
 
 import ProductsTable from "@/components/product/ProductsTable";
+import Loading from "@/components/shared/Loading";
 import TitleSection from "@/components/shared/TitleSection";
 import ProtectedRoute from "@/route/ProtectedRoute";
 import { useEffect, useState } from "react";
@@ -29,7 +30,7 @@ const ManageItems = () => {
     setProducts((prev) => prev.filter((p) => p.id !== id));
   };
 
-  if (isProductLoading) return <h2>Loading</h2>;
+  if (isProductLoading) return <Loading />;
 
   return (
     <>
