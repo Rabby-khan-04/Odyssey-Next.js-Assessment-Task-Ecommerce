@@ -6,6 +6,7 @@ import SaleBanner from "@/components/homePage/saleBanner/SaleBanner";
 import Testimonials from "@/components/homePage/testimonials/Testimonials";
 import WhyChooseUsSection from "@/components/homePage/whychooseus/WhyChooseUsSection";
 import GridDescription from "@/components/shared/GridDescription";
+import Loading from "@/components/shared/Loading";
 
 export default function Home() {
   return (

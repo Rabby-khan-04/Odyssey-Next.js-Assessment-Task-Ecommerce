@@ -2,6 +2,7 @@
 
 import ProductsTable from "@/components/product/ProductsTable";
 import TitleSection from "@/components/shared/TitleSection";
+import ProtectedRoute from "@/route/ProtectedRoute";
 import { useEffect, useState } from "react";
 
 const ManageItems = () => {
