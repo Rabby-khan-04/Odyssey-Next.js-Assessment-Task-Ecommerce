@@ -20,12 +20,12 @@ const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);
 
-  // 👇 set CSS variable for header height
   useEffect(() => {
     if (!headerRef.current) return;
 
     const updateHeight = () => {
       const height = headerRef.current.offsetHeight;
+
       document.documentElement.style.setProperty(
         "--header-height",
         `${height}px`,
@@ -33,27 +33,41 @@ const Header = () => {
     };
 
     updateHeight();
+
     window.addEventListener("resize", updateHeight);
 
-    return () => window.removeEventListener("resize", updateHeight);
-  }, []);
+    const observer = new MutationObserver(updateHeight);
+    observer.observe(headerRef.current, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+    });
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+      observer.disconnect();
+    };
+  }, [user, loading]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
+    let lastScrollY = window.scrollY;
 
-      if (currentScroll > lastScroll && currentScroll > 100) {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setShowHeader(false);
       } else {
         setShowHeader(true);
       }
 
-      setLastScroll(currentScroll);
+      lastScrollY = currentScrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScroll]);
+  }, []);
 
   return (
     <header
@@ -76,6 +90,7 @@ const Header = () => {
       {/* Main Header */}
       <div className="py-2.5 px-0 lg:px-10 border-b">
         <div className="main-container grid grid-cols-12">
+          {/* Navigation */}
           <nav className="col-span-5 hidden lg:block self-center">
             <ul className="flex items-center gap-4 xl:gap-6 text-lg xl:text-2xl font-extrabold">
               {navLinks.map((item) => (
@@ -88,14 +103,17 @@ const Header = () => {
             </ul>
           </nav>
 
+          {/* Logo */}
           <div className="col-span-5 md:col-span-3 lg:col-span-2 self-center">
             <Link href="/">
               <Image loading="eager" src={logo} alt="logo" />
             </Link>
           </div>
 
+          {/* Auth */}
           <div className="col-span-7 md:col-span-9 lg:col-span-5 flex justify-end items-center gap-4">
             {!loading && user ? <UserDropdown /> : <AuthButton />}
+
             <div className="lg:hidden flex justify-end">
               <MobileMenu />
             </div>
