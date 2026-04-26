@@ -4,9 +4,11 @@ import Link from "next/link";
 
 const ProductCard = (props) => {
   return (
-    <div className="overflow-hidden rounded-[10px] border border-[#222] bg-[#f7f7f7]">
+    <div
+      className={`overflow-hidden bg-[#f7f7f7] relative z-30 ${props.className}`}
+    >
       <div className="relative overflow-hidden">
-        <div className="border-b border-[#222] flex items-center justify-center group flex-wrap">
+        <div className="border-b border-dark-gray flex items-center justify-center group flex-wrap">
           <div className="absolute z-10 top-5 right-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 duration-500 ease-out delay-100">
             <IconHeart className="cursor-pointer" />
           </div>
@@ -20,7 +22,6 @@ const ProductCard = (props) => {
               alt={props.title}
               fill
               className="object-cover absolute inset-0 transition-opacity duration-500 ease-out opacity-100 group-hover:opacity-0"
-              sizes="100vw"
             />
 
             {/* Image 2 */}
@@ -29,7 +30,6 @@ const ProductCard = (props) => {
               alt={props.title}
               fill
               className="object-cover absolute inset-0 transition-opacity duration-500 ease-out opacity-0 group-hover:opacity-100"
-              sizes="100vw"
             />
           </Link>
         </div>

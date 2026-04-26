@@ -1,12 +1,12 @@
 import carvText from "@/../public/looks-we-love.png";
 import Image from "next/image";
-import CustomBtn from "../shared/CustomBtn";
+import CustomBtn from "../../shared/CustomBtn";
 import Link from "next/link";
 
 const SaleBanner = () => {
   return (
     <section
-      className={`py-14 lg:py-20 bg-[url('/banner-mobile.png')] lg:bg-[url('/banner.png')] bg-no-repeat bg-cover bg-center mt-20`}
+      className={`pt-14 lg:pt-20 bg-[url('/banner-mobile.png')] lg:bg-[url('/banner.png')] bg-no-repeat bg-cover bg-center`}
     >
       <div className="main-container text-center flex flex-col justify-center items-start lg:items-center py-18.5">
         <Image
