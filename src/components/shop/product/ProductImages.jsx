@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef } from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/image-gallery.css";

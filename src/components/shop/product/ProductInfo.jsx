@@ -1,3 +1,5 @@
+"use client";
+
 import { IconStar } from "@tabler/icons-react";
 import activeCircle from "@/../public/active-circle.svg";
 import Image from "next/image";

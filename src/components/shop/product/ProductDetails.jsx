@@ -5,7 +5,6 @@ import fashionImg from "@/../public/fashion.jpg";
 import { IconPoint } from "@tabler/icons-react";
 
 const ProductDetails = (props) => {
-  console.log(props);
   return (
     <section className="pb-14 lg:pb-20">
       <div className="product-container grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-15">
