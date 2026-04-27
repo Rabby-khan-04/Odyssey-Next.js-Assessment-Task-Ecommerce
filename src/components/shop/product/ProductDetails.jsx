@@ -5,8 +5,9 @@ import fashionImg from "@/../public/fashion.jpg";
 import { IconPoint } from "@tabler/icons-react";
 
 const ProductDetails = (props) => {
+  console.log(props);
   return (
-    <section>
+    <section className="pb-14 lg:pb-20">
       <div className="product-container grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-15">
         <div className="col-span-6">
           <ProductImages images={props?.media.images} />
@@ -29,8 +30,9 @@ const ProductDetails = (props) => {
                 className="rounded-full"
               />
             </div>
-            <div className="">
+            <div className="space-y-4">
               <h6 className="text-dark-gray my-4">Product Specifications</h6>
+              <p>{props?.details?.description}</p>
               <p>
                 Care for fiber: {props?.details?.materials.join(" ")}. We label
                 garments manufactured using environmentally friendly
@@ -48,8 +50,9 @@ const ProductDetails = (props) => {
               </ul>
             </div>
 
-            <div className="">
+            <div className="space-y-4">
               <h6 className="text-dark-gray my-4">Material</h6>
+              <p>{props?.details?.materials.join(", ")}</p>
               <p>
                 The Green to Wear 2.0 standard aims to minimize the
                 environmental impact of textile production. To this end, we have
